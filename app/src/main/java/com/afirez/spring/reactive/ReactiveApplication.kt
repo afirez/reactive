@@ -2,13 +2,12 @@ package com.afirez.spring.reactive
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
-//import org.springframework.kotlin.experimental.coroutine.EnableCoroutine
-import org.springframework.scheduling.annotation.EnableAsync
-import org.springframework.web.reactive.config.EnableWebFlux
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories
+import org.springframework.data.r2dbc.repository.config.EnableR2dbcRepositories
 
 @SpringBootApplication
-//@EnableCoroutine
-@EnableWebFlux
+@EnableR2dbcRepositories
+@EnableJpaRepositories
 open class ReactiveApplication
 
 fun main(args: Array<String>) {
